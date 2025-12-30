@@ -1,0 +1,288 @@
+/* ==========================
+   Color Palette
+========================== */
+:root {
+  --primary-color: #FFB3BA;     /* pastel pink */
+  --accent-color: #BAFFC9;      /* pastel green */
+  --background-color: #1F1F1F;  /* dark background */
+  --box-background: #2C2C2C;
+  --text-color: #EAEAEA;
+  --subtitle-color: #D0D0D0;
+  --border-color: #BAFFC9;
+}
+
+/* ==========================
+   Global Styles
+========================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* ==========================
+   Navbar
+========================== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--box-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  border-bottom: 2px solid var(--accent-color);
+  z-index: 1000;
+}
+
+.logo {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.nav-right a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.nav-right a:hover {
+  color: var(--accent-color);
+}
+
+/* ==========================
+   Hero Section
+========================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  background: linear-gradient(
+    -45deg,
+    #1F1F1F,
+    #2C2C2C,
+    #3A3A3A,
+    #1F1F1F
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hcontent {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile-pic {
+  width: 350px;
+  height: 401px;
+  object-fit: contain;
+  border-radius: 15px;
+  border: 3px solid var(--accent-color);
+}
+
+.htext h1 {
+  font-size: 3.5rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.htext p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--subtitle-color);
+  max-width: 600px;
+}
+
+/* ==========================
+   Section Base
+========================== */
+.about-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 4rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: var(--subtitle-color);
+  margin-bottom: 50px;
+}
+
+/* ==========================
+   About Box
+========================== */
+.about-box {
+  display: flex;
+  gap: 50px;
+  background-color: var(--box-background);
+  padding: 40px;
+  border-radius: 25px;
+  border: 3px solid var(--border-color);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.about-pic {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.point {
+  background-color: #3A3A3A;
+  padding: 18px 22px;
+  border-radius: 18px;
+  font-size: 1.3rem;
+  transition: transform 0.3s;
+}
+
+.point:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================
+   Project Card
+========================== */
+.project-card {
+  background-color: var(--box-background);
+  padding: 50px;
+  border-radius: 25px;
+  border: 3px solid var(--border-color);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.project-card h3 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+.project-card p {
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+
+.project-card a {
+  color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+/*SKILL BOX*/
+
+.skill-box {
+  background-color: var(--accent-color); /* pastel green */
+  color: #1F1F1F; /* dark text for contrast */
+  padding: 12px 20px; /* slightly more padding */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;       /* comfortable readable size */
+  text-align: center;
+  min-width: 120px;      /* slightly wider to fit longer names */
+  min-height: 50px;      /* slightly taller */
+  max-width: 180px;      /* prevents overly long boxes */
+  word-wrap: break-word; /* wrap if too long */
+  margin: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px; /* spacing between boxes */
+  margin-top: 20px;
+}
+
+/* ==========================
+   Resume Section
+========================== */
+#resume {
+  text-align: center;
+  margin: 100px auto;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background-color: var(--accent-color);
+  color: #000;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   Contact
+========================== */
+#contact a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 800px) {
+  .hcontent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section h1 {
+    font-size: 2.5rem;
+  }
+}
